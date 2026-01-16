@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    header nav ul {
+      list-style-type: none;
+    }
+
+    .setting-name {
+        text-transform: uppercase;
+        color: gray;
+    }
+
+    .col {
+    }
+  </style>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">netflix</a>
+          <!-- hamburger menu toggle -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- menu items -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- home -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <!-- tv shows -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <!-- movies -->
+            </ul>
+
+            <!-- options (search icon, kids, notifications, profile dropdown) -->
+            <ul class="d-flex justify-content-center align-items-center gap-2 me-5">
+              <!-- search icon -->
+              <li>search</li>
+              <!-- kids -->
+              <li>KIDS</li>
+              <!-- notifications -->
+              <li>bell</li>
+              <li>a</li>
+              <!-- profile dropdown -->
+              <li>
+                <div class="dropdown-center">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <!-- profile image (the first thing the user sees) -->
+                    <img src="https://placedog.net/50/50" alt="" />
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">action 1</a></li>
+                    <li><a class="dropdown-item" href="#">action 2</a></li>
+                    <li><a class="dropdown-item" href="#">action 3</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+
+            <!-- <form class="d-flex" role="search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+             -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col col-12 col-md-9">
+            <!-- account -->
+            <div class="row">
+              <div class="col-12 fs-1 border-bottom">
+                <p>account</p>
+              </div>
+            </div>
+
+            <!-- billing -->
+            <div class="row border-bottom">
+              <!-- title -->
+              <div class="col col-12 col-md-3">
+                <p class="setting-name">membership & billing</p>
+                <button>cancel membership</button>
+              </div>
+              <!-- content (settings) -->
+              <div class="col col-12 col-md-9">
+                <div class="row">
+                  <div class="col-12">
+                    <!-- group 1 (password, email etc.) -->
+                    <div class="row justify-content-between">
+                      <div class="col-6">student@strive</div>
+                      <div class="col-6 text-end">change email</div>
+                    </div>
+                    <div class="row justify-content-between">
+                      <div class="col-6">password:</div>
+                      <div class="col-6 text-end">change password</div>
+                    </div>
+                    <div class="row justify-content-between border-bottom">
+                      <div class="col-6">phone: 3343423432</div>
+                      <div class="col-6 text-end">change phone number</div>
+                    </div>
+                    <!-- group 2 (paypal, etc.) -->
+                    <div class="row justify-content-between">
+                      <div class="col-6">paypal adming@strive</div>
+                      <div class="col-6 text-end">update payment info</div>
+                    </div>
+                    <div class="row border-bottom">
+                      <div class="col-12 text-end">billing details</div>
+                    </div>
+                    <!-- group 3 (gift card etc.) -->
+                    <div class="row">
+                      <div class="col-12 text-end">redeem gift card</div>
+                      <div class="col-12 text-end">where to buy gift cards</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- plan -->
+            <div class="row border-bottom">
+              <!-- title -->
+              <div class="col col-12 col-md-3">
+                <p class="setting-name">plan details</p>
+              </div>
+              <!-- content (settings) -->
+              <div class="col col-12 col-md-9">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row justify-content-between">
+                      <div class="col-6">premium ultra hd</div>
+                      <div class="col-6 text-end">change plan</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- settings -->
+            <div class="row border-bottom">
+              <!-- title -->
+              <div class="col col-12 col-md-3">
+                <p class="setting-name">settings</p>
+              </div>
+              <!-- content (settings) -->
+              <div class="col col-12 col-md-9">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-12">parent controls</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">test participation</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">manage download devices</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">activate a device</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- my profile -->
+            <div class="row">
+              <!-- title -->
+              <div class="col col-12 col-md-3">
+                <p class="setting-name">my profile</p>
+              </div>
+              <!-- content (settings) -->
+              <div class="col col-12 col-md-9">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row justify-content-between">
+                      <div class="col-6">strive student</div>
+                      <div class="col-6 text-end">manage profiles</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 text-end">add profile email</div>
+                    </div>
+                    <div class="row justify-content-between">
+                      <div class="col-12 col-md-4">
+                        <p>language</p>
+                        <p>playback settings</p>
+                        <p>subtle appearance</p>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <p>viewing activity</p>
+                        <p>ratings</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
