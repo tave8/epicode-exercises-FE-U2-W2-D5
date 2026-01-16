@@ -55,7 +55,7 @@
       }
     </style>
   </head>
-  <body class="d-flex flex-column min-vh-100 gap-3" >
+  <body class="d-flex flex-column min-vh-100 gap-3">
     <header class="position-fixed w-100">
       <nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container-fluid">
@@ -114,13 +114,15 @@
               </li>
               <!-- profile dropdown -->
               <li>
-                <div class="dropdown-center" >
-                  <button class="btn dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="100,20">
-                    <!-- profile image (the first thing the user sees) -->
-                    <img src="https://placedog.net/50/50" class="img-fluid" style="max-width: 20px" alt="" />
+                <!-- 1. Wrap in a div with ms-auto to push the button to the right -->
+                <div class="dropdown-center ms-auto">
+                  <button class="btn dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,10">
+                    <img src="https://placedog.net/50/50" class="img-fluid" style="max-width: 20px" alt="Profile" />
                   </button>
-                  <ul class="dropdown-menu">
-               <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
+
+                  <!-- 2. Add dropdown-menu-end to align the menu to the right edge of the button -->
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
                     <li><a class="dropdown-item" href="./settings.html">Settings</a></li>
                   </ul>
                 </div>
