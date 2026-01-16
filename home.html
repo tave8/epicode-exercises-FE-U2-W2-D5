@@ -4,39 +4,72 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
+    <!-- bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
   </head>
-  <link rel="stylesheet" href="./assets/css/netflix-scroller.css">
+  <link rel="stylesheet" href="./assets/css/netflix-scroller.css" />
   <!-- custom style -->
   <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    header {
+      z-index: 9000 !important;
+      background-color: black;
+      color: white !important;
+    }
+
     header nav ul {
       list-style-type: none;
     }
 
     main {
       /* push footer  */
-      flex-grow: 1;
+      /* flex-grow: 1; */
     }
 
     footer {
       background-color: black;
       color: white;
+      margin-top: 100px;
+      margin-bottom: 10px;
     }
 
+    footer .links {
+      text-transform: capitalize;
+    }
+
+    footer .links p {
+      margin-bottom: 0.7rem !important;
+    }
+
+    p {
+      margin: 0 !important;
+    }
+
+    main {
+      margin-top: 70px;
+    }
   </style>
   <body class="d-flex flex-column min-vh-100 gap-3">
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <header class="position-fixed w-100">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">netflix</a>
+          <a class="navbar-brand" href="#">
+            <img src="./assets/netflix_logo.png" class="img-fluid" style="max-width: 80px" alt="" />
+          </a>
           <!-- hamburger menu toggle -->
           <button
-            class="navbar-toggler"
+            class="navbar-toggler text-white"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -52,30 +85,44 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <!-- home -->
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link text-white" aria-current="page" href="#">Home</a>
               </li>
               <!-- tv shows -->
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link text-white" href="#">TV Shows</a>
               </li>
               <!-- movies -->
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Movies</a>
+              </li>
+              <!-- recently added -->
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Recently Added</a>
+              </li>
+              <!-- my list -->
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">My List</a>
+              </li>
             </ul>
 
             <!-- options (search icon, kids, notifications, profile dropdown) -->
-            <ul class="d-flex justify-content-center align-items-center gap-2 me-5">
+            <ul class="d-flex justify-content-center align-items-center gap-4 m-0 p-0">
               <!-- search icon -->
-              <li>search</li>
+              <li>
+                <i class="bi bi-search"></i>
+              </li>
               <!-- kids -->
               <li>KIDS</li>
               <!-- notifications -->
-              <li>bell</li>
-              <li>a</li>
+              <li>
+                <i class="bi bi-bell-fill"></i>
+              </li>
               <!-- profile dropdown -->
               <li>
                 <div class="dropdown-center">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn dropdown-toggle btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="100,20">
                     <!-- profile image (the first thing the user sees) -->
-                    <img src="https://placedog.net/50/50" alt="" />
+                    <img src="https://placedog.net/50/50" class="img-fluid" style="max-width: 20px" alt="" />
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">action 1</a></li>
@@ -85,32 +132,36 @@
                 </div>
               </li>
             </ul>
-
-            <!-- <form class="d-flex" role="search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-             -->
           </div>
         </div>
       </nav>
     </header>
+
     <main class="d-flex flex-column gap-3">
       <!-- filters -->
       <section class="container-fluid filters">
         <div class="row">
           <!-- title and genres options -->
-          <div class="col col-12 col-md-9">
-            <span>tv shows</span>
-            <select name="" id="">
-              <option value="">genre 1</option>
-              <option value="">genre 2</option>
-            </select>
+          <div class="col col-12 col-md-9 d-flex gap-3 align-items-center">
+            <span class="fs-2 fw-bold">TV Shows</span>
+            <div class="dropdown">
+              <a class="btn dropdown-toggle btn-outline-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Genres</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
           </div>
           <!-- display as options -->
           <div class="col col-12 col-md-3 text-end">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-primary">vert</button>
-              <button type="button" class="btn btn-primary">grid</button>
+              <button type="button" class="btn btn-primary btn-outline-light btn-dark">
+                <i class="bi bi-stack"></i>
+              </button>
+              <button type="button" class="btn btn-primary btn-outline-light btn-dark">
+                <i class="bi bi-grid"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -120,7 +171,7 @@
         <!-- title -->
         <div class="row">
           <div class="col col-12">
-            <p>Trending Now</p>
+            <p class="fs-3">Trending Now</p>
           </div>
         </div>
         <!-- content -->
@@ -132,7 +183,7 @@
                 <div class="left"></div>
                 <div class="right"></div>
               </div>
-              <div class="cards">
+              <div class="row cards g-1">
                 <div class="col col-6 col-md-3 col-lg-2">
                   <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
                 </div>
@@ -168,14 +219,45 @@
         <!-- title -->
         <div class="row">
           <div class="col col-12">
-            <p>Watch It Again</p>
+            <p class="fs-3">Watch It Again</p>
           </div>
         </div>
         <!-- content -->
         <div class="row">
           <div class="col col-12">
             <!-- START slider/carousel -->
-
+            <div class="row netflix-scroller">
+              <div class="buttons">
+                <div class="left"></div>
+                <div class="right"></div>
+              </div>
+              <div class="row cards g-1">
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+              </div>
+            </div>
             <!-- END slider/carousel -->
           </div>
         </div>
@@ -185,59 +267,90 @@
         <!-- title -->
         <div class="row">
           <div class="col col-12">
-            <p>New Releases</p>
+            <p class="fs-3">New Releases</p>
           </div>
         </div>
         <!-- content -->
         <div class="row">
           <div class="col col-12">
             <!-- START slider/carousel -->
-
+            <div class="row netflix-scroller">
+              <div class="buttons">
+                <div class="left"></div>
+                <div class="right"></div>
+              </div>
+              <div class="row cards g-1">
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+              </div>
+            </div>
             <!-- END slider/carousel -->
           </div>
         </div>
       </section>
     </main>
+
     <footer class="">
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col col-12 col-md-9 col-lg-6">
-            <div class="row">
+            <div class="row gap-3">
               <!-- social media links -->
-              <div class="col col-12">
+              <div class="col col-12 fs-4 d-flex gap-3">
                 <!-- facebook -->
-                <span>facebook</span>
+                <span><i class="bi bi-facebook"></i></span>
                 <!-- instagram -->
-                <span>instagram</span>
+                <span><i class="bi bi-instagram"></i></span>
                 <!-- twitter -->
+                <span><i class="bi bi-twitter"></i></span>
                 <!-- youtube -->
+                <span><i class="bi bi-youtube"></i></span>
               </div>
               <!-- links -->
               <div class="col col-12">
-                <div class="row g-2">
+                <div class="row g-2 links">
                   <div class="col col-6 col-md-3">
                     <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
+                    <p>media center</p>
+                    <p>privacy</p>
+                    <p>contact us</p>
                   </div>
                   <div class="col col-6 col-md-3">
-                    <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
+                    <p>audio description</p>
+                    <p>investor relations</p>
+                    <p>legal notices</p>
                   </div>
                   <div class="col col-6 col-md-3">
-                    <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
+                    <p>help center</p>
+                    <p>jobs</p>
+                    <p>cookie preferences</p>
                   </div>
                   <div class="col col-6 col-md-3">
-                    <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
-                    <p>audio and subtitles</p>
+                    <p>gift cards</p>
+                    <p>terms of use</p>
+                    <p>corporate information</p>
                   </div>
 
                   <!-- <div class="col col-6 col-md-3"></div>
@@ -247,8 +360,8 @@
               </div>
               <!-- copyright -->
               <div class="col col-12">
-                <button>service code</button>
-                <p>copyright netflix</p>
+                <button class="btn btn-outline-light">Service Code</button>
+                <p class="mt-2">1997-2019 Netflix, inc.</p>
               </div>
             </div>
           </div>
@@ -261,6 +374,14 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./assets/js/script.js"></script>
+    <!-- popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./assets/js/netflix-scroller.js"></script>
+    <script src="./assets/js/helpers.js"></script>
   </body>
 </html>

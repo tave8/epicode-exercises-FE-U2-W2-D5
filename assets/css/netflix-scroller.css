@@ -9,7 +9,7 @@
   flex-wrap: nowrap;
   gap: .1rem;
   /* allows the images to move out when scaled */
-  padding-block: 3rem;
+  padding-block: .6rem;
 }
 
 .netflix-scroller .buttons-hidden {
@@ -20,11 +20,12 @@
   position: absolute;
   width: min-content;
   /* min-height: 100%; */
-  z-index: 9999;
+  z-index: 5;
   font-size: 3rem;
   background-color: rgb(215, 215, 215);
   opacity: 0.5;
   cursor: pointer;
+  color: black;
 }
 
 .netflix-scroller > .buttons > .left {
