@@ -1,0 +1,9 @@
+header {
+  z-index: 9000 !important;
+  background-color: black;
+  color: white !important;
+}
+
+header nav ul {
+  list-style-type: none;
+}
