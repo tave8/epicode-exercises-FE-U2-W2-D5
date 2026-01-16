@@ -6,6 +6,8 @@ const main = () => {
 
 window.addEventListener("load", main);
 
+// const netflixScrollersDistances = {}
+
 const setNetflixScoller = () => {
   addOrRemoveNetflixScrollerButtons();
   addOnNetflixScrollerShowButtonsHandler();
@@ -82,17 +84,20 @@ const positionNetflixScrollerButtons = () => {
 };
 
 const addNetflixScrollerButtonHandler = (button, buttonDirection, cards) => {
+  //   left button
   if (buttonDirection == "left") {
     button.addEventListener("click", () => {
       cards.scrollTo({
-        left: -500,
+        left: getTotalLeftScrollForLeft(cards),
         behavior: "smooth",
       });
     });
-  } else if (buttonDirection == "right") {
+  }
+  //   right button
+  else if (buttonDirection == "right") {
     button.addEventListener("click", () => {
       cards.scrollTo({
-        left: 500,
+        left: getTotalLeftScrollForRight(cards),
         behavior: "smooth",
       });
     });
@@ -107,6 +112,20 @@ const getAppropriateNetflixScrollerButtonHeight = (cardsContainer, button) => {
 };
 
 // HELPERS
+
+const getMoveLeftByFixedAmount = () => {
+    return 300
+}
+
+const getTotalLeftScrollForLeft = (cards) => {
+  const currentLeftScroll = cards.scrollLeft;
+  return currentLeftScroll - getMoveLeftByFixedAmount()
+};
+
+const getTotalLeftScrollForRight = (cards) => {
+  const currentLeftScroll = cards.scrollLeft;
+  return currentLeftScroll + getMoveLeftByFixedAmount()
+};
 
 const isDesktopDevice = () => {
   // 1. Modern API (Chromium-based browsers)

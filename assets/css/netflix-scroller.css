@@ -1,0 +1,42 @@
+.netflix-scroller {
+  position: relative;
+}
+
+.netflix-scroller > .cards {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  gap: .1rem;
+  /* allows the images to move out when scaled */
+  padding-block: 3rem;
+}
+
+.netflix-scroller .buttons-hidden {
+  display: none;
+}
+
+.netflix-scroller > .buttons > * {
+  position: absolute;
+  width: min-content;
+  /* min-height: 100%; */
+  z-index: 9999;
+  font-size: 3rem;
+  background-color: rgb(215, 215, 215);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.netflix-scroller > .buttons > .left {
+}
+
+.netflix-scroller > .cards img {
+  cursor: pointer;
+  transition: all ease-in 0.5s;
+  z-index: 10000;
+  height: 100%;
+}
+
+.netflix-scroller > .cards img:hover {
+  transform: scale(1.2);
+}
