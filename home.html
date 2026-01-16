@@ -18,8 +18,8 @@
     }
 
     main {
-        /* push footer  */
-        flex-grow: 1;
+      /* push footer  */
+      flex-grow: 1;
     }
 
     footer {
@@ -27,7 +27,7 @@
       color: white;
     }
   </style>
-  <body class="d-flex flex-column min-vh-100">
+  <body class="d-flex flex-column min-vh-100 gap-3">
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -73,7 +73,7 @@
                 <div class="dropdown-center">
                   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <!-- profile image (the first thing the user sees) -->
-                    <img src="https://placedog.net/50/50" alt="">
+                    <img src="https://placedog.net/50/50" alt="" />
                   </button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">action 1</a></li>
@@ -92,23 +92,78 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="d-flex flex-column gap-3">
       <!-- filters -->
-      <section class="filters">
-        <div class="genre-title">
-          <p>tv shows</p>
+      <section class="container-fluid filters">
+        <div class="row">
+          <!-- title and genres options -->
+          <div class="col col-12 col-md-9">
+            <span>tv shows</span>
+            <select name="" id="">
+              <option value="">genre 1</option>
+              <option value="">genre 2</option>
+            </select>
+          </div>
+          <!-- display as options -->
+          <div class="col col-12 col-md-3 text-end">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary">vert</button>
+              <button type="button" class="btn btn-primary">grid</button>
+            </div>
+          </div>
         </div>
-        <div class="genres">
-          <select name="" id=""></select>
-        </div>
-        <div class="show-as">button group</div>
       </section>
       <!-- trending now -->
-      <section class="trending-now"></section>
+      <section class="container-fluid trending-now">
+        <!-- title -->
+        <div class="row">
+          <div class="col col-12">
+            <p>Trending Now</p>
+          </div>
+        </div>
+        <!-- content -->
+        <div class="row">
+          <div class="col col-12">
+            <!-- START slider/carousel -->
+
+            <!-- END slider/carousel -->
+          </div>
+        </div>
+      </section>
       <!-- watch it again -->
-      <section class="watch-again"></section>
+      <section class="container-fluid watch-again">
+        <!-- title -->
+        <div class="row">
+          <div class="col col-12">
+            <p>Watch It Again</p>
+          </div>
+        </div>
+        <!-- content -->
+        <div class="row">
+          <div class="col col-12">
+            <!-- START slider/carousel -->
+
+            <!-- END slider/carousel -->
+          </div>
+        </div>
+      </section>
       <!-- new releases -->
-      <section class="new-releases"></section>
+      <section class="container-fluid new-releases">
+        <!-- title -->
+        <div class="row">
+          <div class="col col-12">
+            <p>New Releases</p>
+          </div>
+        </div>
+        <!-- content -->
+        <div class="row">
+          <div class="col col-12">
+            <!-- START slider/carousel -->
+
+            <!-- END slider/carousel -->
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="">
       <div class="container-fluid">
