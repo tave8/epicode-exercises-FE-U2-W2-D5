@@ -13,16 +13,26 @@
   </head>
   <!-- custom style -->
   <style>
+    header nav ul {
+      list-style-type: none;
+    }
+
+    main {
+        /* push footer  */
+        flex-grow: 1;
+    }
+
     footer {
       background-color: black;
       color: white;
     }
   </style>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">netflix</a>
+          <!-- hamburger menu toggle -->
           <button
             class="navbar-toggler"
             type="button"
@@ -34,31 +44,50 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- menu items -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- home -->
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
+              <!-- tv shows -->
               <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <!-- movies -->
+            </ul>
+
+            <!-- options (search icon, kids, notifications, profile dropdown) -->
+            <ul class="d-flex justify-content-center align-items-center gap-2 me-5">
+              <!-- search icon -->
+              <li>search</li>
+              <!-- kids -->
+              <li>KIDS</li>
+              <!-- notifications -->
+              <li>bell</li>
+              <li>a</li>
+              <!-- profile dropdown -->
+              <li>
+                <div class="dropdown-center">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <!-- profile image (the first thing the user sees) -->
+                    <img src="https://placedog.net/50/50" alt="">
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">action 1</a></li>
+                    <li><a class="dropdown-item" href="#">action 2</a></li>
+                    <li><a class="dropdown-item" href="#">action 3</a></li>
+                  </ul>
+                </div>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+
+            <!-- <form class="d-flex" role="search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
+             -->
           </div>
         </div>
       </nav>
@@ -81,7 +110,7 @@
       <!-- new releases -->
       <section class="new-releases"></section>
     </main>
-    <footer>
+    <footer class="">
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col col-12 col-md-9 col-lg-6">
