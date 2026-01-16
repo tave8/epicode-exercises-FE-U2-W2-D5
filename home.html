@@ -26,6 +26,48 @@
       background-color: black;
       color: white;
     }
+
+    .netflix-scroller {
+      position: relative;
+    }
+
+    .netflix-scroller > .cards {
+      display: flex;
+      overflow-x: hidden; 
+      /* overflow-x: auto; */
+      flex-wrap: nowrap;
+      gap: 1rem;
+      overflow-y: hidden;
+    }
+
+    .netflix-scroller .buttons-hidden {
+      display: none;
+    }
+
+    .netflix-scroller > .buttons > * {
+      position: absolute;
+      width: min-content;
+      /* min-height: 100%; */
+      z-index: 9999;
+      font-size: 3rem;
+      background-color: rgb(215, 215, 215);
+      opacity: .5;
+      cursor: pointer;
+    }
+
+    .netflix-scroller > .buttons > .left {
+
+    }
+
+    .netflix-scroller > .cards img {
+      cursor: pointer;
+      transition: all ease-in 0.5s;
+      z-index: 9000;
+    }
+
+    .netflix-scroller > .cards img:hover {
+      transform: scale(1.2);
+    }
   </style>
   <body class="d-flex flex-column min-vh-100 gap-3">
     <header>
@@ -125,7 +167,38 @@
         <div class="row">
           <div class="col col-12">
             <!-- START slider/carousel -->
-
+            <div class="row netflix-scroller">
+              <div class="buttons">
+                <div class="left"></div>
+                <div class="right"></div>
+              </div>
+              <div class="cards">
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+                <div class="col col-6 col-md-3 col-lg-2">
+                  <img src="https://placedog.net/300/150" class="img-fluid" alt="" />
+                </div>
+              </div>
+            </div>
             <!-- END slider/carousel -->
           </div>
         </div>
@@ -227,5 +300,7 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
