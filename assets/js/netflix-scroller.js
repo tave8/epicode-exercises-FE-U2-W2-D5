@@ -9,9 +9,9 @@ window.addEventListener("load", main);
 // const netflixScrollersDistances = {}
 
 const setNetflixScoller = () => {
-  addOrRemoveNetflixScrollerButtons();
   addOnNetflixScrollerShowButtonsHandler();
   positionNetflixScrollerButtons();
+  addOrRemoveNetflixScrollerButtons();
 };
 
 // if user is on desktop, immediately hide the
@@ -26,7 +26,7 @@ const addOrRemoveNetflixScrollerButtons = () => {
     const buttons = netflixScroller.querySelector(".buttons");
     // FIX: when adding this class first, buttons do not seem
     // to be correctly positioned
-    // buttons.classList.add("buttons-hidden");
+    buttons.classList.add("buttons-hidden");
   });
 };
 
