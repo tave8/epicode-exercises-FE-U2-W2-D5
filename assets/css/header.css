@@ -2,6 +2,7 @@ header {
   z-index: 9000 !important;
   background-color: black;
   color: white !important;
+  top: 0;
 }
 
 header nav ul {

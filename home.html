@@ -49,11 +49,15 @@
       main {
         margin-top: 70px;
       }
+
+      button:hover {
+        color: white !important;
+      }
     </style>
   </head>
-  <body class="d-flex flex-column min-vh-100 gap-3">
+  <body class="d-flex flex-column min-vh-100 gap-3" >
     <header class="position-fixed w-100">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img src="./assets/netflix_logo.png" class="img-fluid" style="max-width: 80px" alt="" />
@@ -110,8 +114,8 @@
               </li>
               <!-- profile dropdown -->
               <li>
-                <div class="dropdown-center">
-                  <button class="btn dropdown-toggle btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="100,20">
+                <div class="dropdown-center" >
+                  <button class="btn dropdown-toggle bg-transparent" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="100,20">
                     <!-- profile image (the first thing the user sees) -->
                     <img src="https://placedog.net/50/50" class="img-fluid" style="max-width: 20px" alt="" />
                   </button>
@@ -147,10 +151,10 @@
           <!-- display as options -->
           <div class="col col-12 col-md-3 text-end">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-primary btn-outline-light btn-dark">
+              <button type="button" class="btn btn-outline-light bg-transparent">
                 <i class="bi bi-stack"></i>
               </button>
-              <button type="button" class="btn btn-primary btn-outline-light btn-dark">
+              <button type="button" class="btn btn-outline-light bg-transparent">
                 <i class="bi bi-grid"></i>
               </button>
             </div>
